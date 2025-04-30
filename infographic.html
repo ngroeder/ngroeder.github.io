@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Infographic</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f0f0;
+      color: #2a5d7c;
+    }
+
+    .dropdown {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+
+    .dropdown button {
+      background-color: #c47f3f;
+      color: #fff;
+      padding: 10px 16px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      min-width: 160px;
+      border: 2px solid #c47f3f;
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: #2a5d7c;
+      padding: 10px 12px;
+      text-decoration: none;
+      display: block;
+      border-bottom: 1px solid #eee;
+      font-weight: 500;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.4em;
+      margin-top: 70px;
+      margin-bottom: 30px;
+      font-weight: bold;
+      border: 2px solid #c47f3f;
+      display: inline-block;
+      padding: 12px 30px;
+      background-color: #fff;
+      color: #2a5d7c;
+    }
+
+    .image-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px;
+    }
+
+    .image-container img {
+      max-width: 90%;
+      height: auto;
+      border: 2px solid #c47f3f;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .text-box {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 20px;
+      background-color: #fdfdfd;
+      border: 2px solid #c47f3f;
+      border-radius: 4px;
+      text-align: center;
+      line-height: 1.5em;
+    }
+
+    .view-btn {
+      margin-top: 10px;
+      padding: 8px 14px;
+      background-color: #c47f3f;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      padding-top: 60px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.8);
+    }
+
+    .modal-content {
+      margin: auto;
+      display: block;
+      max-width: 80%;
+    }
+
+    .close {
+      position: absolute;
+      top: 30px;
+      right: 60px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .footer-nav {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .footer-nav a {
+      text-decoration: none;
+      color: #2a5d7c;
+      font-weight: 500;
+      margin: 0 12px;
+      border: 2px solid #c47f3f;
+      padding: 8px 14px;
+      background-color: #fff;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Dropdown Ribbon -->
+  <div class="dropdown">
+    <button>Menu</button>
+    <div class="dropdown-content">
+      <a href="index.html">Home</a>
+      <a href="infographic.html">Infographic</a>
+      <a href="photgraphy.html">Photography</a>
+      <a href="bookmark.html">Bookmark</a>
+    </div>
+  </div>
+
+  <!-- Page Title -->
+  <div style="text-align: center;">
+    <h1>Infographic</h1>
+  </div>
+
+  <!-- Infographic Image and View -->
+  <div class="image-container">
+    <img src="images/golf-infographic.jpg" alt="Golf Infographic" onclick="openModal('modal1')">
+    <button class="view-btn" onclick="openModal('modal1')">View</button>
+  </div>
+
+  <!-- Description -->
+  <div class="text-box">
+    <p>
+      For this project, we were assigned to pick a communication technology of our choice, I chose the golf course as a communication technology. This was made on Indesign and the images were taken from the web. This projects combines all the deisgn principles we learned and the technical skill we got with Indesign working on it with previous projects. To help me accomplish this I first drew out multiple rough drafts on paper to figure out the correct design I wanted. It also toook a little bit of research on the topic itself.
+    </p>
+  </div>
+
+  <!-- Footer Navigation -->
+  <div class="footer-nav">
+    <a href="index.html">Home</a>
+    <a href="infographic.html">Infographic</a>
+    <a href="photgraphy.html">Photography</a>
+    <a href="bookmark.html">Bookmark</a>
+  </div>
+
+  <!-- Modal -->
+  <div id="modal1" class="modal">
+    <span class="close" onclick="closeModal('modal1')">&times;</span>
+    <img class="modal-content" src="images/golf-infographic.jpg">
+  </div>
+
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = "block";
+    }
+    function closeModal(id) {
+      document.getElementById(id).style.display = "none";
+    }
+  </script>
+<tr>
+<div style="text-align: center; margin-bottom: 20px;">
+  <p>&copy; 2025 Nate Roeder</p>
+</div>
+</body>
+</html>

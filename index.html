@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f0f0; /* soft gray */
+      color: #2a5d7c; /* deep teal */
+    }
+
+    /* Dropdown Ribbon */
+    .dropdown {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+
+    .dropdown button {
+      background-color: #c47f3f; /* copper */
+      color: #fff;
+      padding: 10px 16px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      min-width: 160px;
+      border: 2px solid #c47f3f;
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: #2a5d7c;
+      padding: 10px 12px;
+      text-decoration: none;
+      display: block;
+      border-bottom: 1px solid #eee;
+      font-weight: 500;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.4em;
+      margin-top: 70px;
+      margin-bottom: 30px;
+      font-weight: bold;
+      border: 2px solid #c47f3f;
+      display: inline-block;
+      padding: 12px 30px;
+      background-color: #fff;
+      color: #2a5d7c;
+    }
+
+    .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 30px auto;
+      max-width: 900px; /* slightly wider */
+      gap: 30px; /* more space between image and text */
+    }
+
+    .content img {
+      width: 250px;
+      height: 330px;
+      border: 2px solid #c47f3f;
+      border-radius: 4px;
+      object-fit: cover;
+    }
+
+    .text-box {
+      width: 320px; /* wider to fit text */
+      height: auto; /* auto height */
+      border: 2px solid #c47f3f;
+      padding: 20px;
+      background-color: #fdfdfd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      line-height: 1.5em;
+      border-radius: 4px;
+      font-size: 0.95em; /* slightly smaller font */
+      overflow-wrap: break-word; /* prevent overflow issues */
+    }
+
+    .footer-nav {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .footer-nav a {
+      text-decoration: none;
+      color: #2a5d7c;
+      font-weight: 500;
+      margin: 0 12px;
+      border: 2px solid #c47f3f;
+      padding: 8px 14px;
+      background-color: #fff;
+      border-radius: 4px;
+    }
+
+    .footer-copy {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #2a5d7c;
+      font-weight: 500;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Dropdown Ribbon -->
+  <div class="dropdown">
+    <button>Menu</button>
+    <div class="dropdown-content">
+      <a href="index.html">Home</a>
+      <a href="infographic.html">Infographic</a>
+      <a href="photgraphy.html">Photography</a>
+      <a href="bookmark.html">Bookmark</a>
+    </div>
+  </div>
+
+  <!-- Centered Title -->
+  <div style="text-align: center;">
+    <h1> My Portfolio for AENG 110</h1>
+  </div>
+
+  <!-- Photo + Text -->
+  <div class="content">
+    <img src="images/myphoto.jpg" alt="My Photo">
+    <div class="text-box">
+      <p>
+        Hey guys, I’m a junior in college majoring in Applied Engineering with a focus on CAD. 
+        I’m originally from Lancaster, PA, and I’ve always been interested in how things are built 
+        and designed, which led me to this field. I really enjoy working with design software and 
+        bringing ideas to life through detailed plans and drawings.<br><br>
+        Outside of school, I’m big on staying active. I love playing golf whenever I get the chance, 
+        and I’m also into working out. This following website is a final project of my AENG 110 class. 
+        It compiles some of the projects I have done throughout the semester, and I am in charge of 
+        putting them all into a website that I designed.
+      </p>
+    </div>
+  </div>
+
+  <!-- Footer Navigation -->
+  <div class="footer-nav">
+    <a href="index.html">Home</a>
+    <a href="infographic.html">Infographic</a>
+    <a href="photgraphy.html">Photography</a>
+    <a href="bookmark.html">Bookmark</a>
+  </div>
+
+  <!-- Footer Copy -->
+  <div class="footer-copy">
+    <p>&copy; 2025 Nate Roeder</p>
+  </div>
+
+</body>
+</html>

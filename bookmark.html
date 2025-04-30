@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bookmark Project</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f0f0;
+      color: #2a5d7c;
+    }
+
+    .dropdown {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+
+    .dropdown button {
+      background-color: #c47f3f;
+      color: #fff;
+      padding: 10px 16px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      min-width: 160px;
+      border: 2px solid #c47f3f;
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: #2a5d7c;
+      padding: 10px 12px;
+      text-decoration: none;
+      display: block;
+      border-bottom: 1px solid #eee;
+      font-weight: 500;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.4em;
+      margin-top: 60px;
+      margin-bottom: 20px;
+      font-weight: bold;
+      border: 2px solid #c47f3f;
+      display: inline-block;
+      padding: 12px 30px;
+      background-color: #fff;
+      color: #2a5d7c;
+    }
+
+    .section {
+      max-width: 800px;
+      margin: 20px auto;
+      text-align: center;
+    }
+
+    .bookmark-img {
+      height: 400px;
+      width: auto;
+      border: 2px solid #c47f3f;
+      border-radius: 4px;
+      cursor: pointer;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .caption-box {
+      margin-top: 8px;
+      padding: 14px;
+      background-color: #fdfdfd;
+      border: 2px solid #c47f3f;
+      border-radius: 4px;
+      text-align: center;
+      font-size: 0.95em;
+      line-height: 1.5em;
+    }
+
+    .view-btn {
+      margin-top: 10px;
+      padding: 8px 16px;
+      background-color: #c47f3f;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1em;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      padding-top: 40px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.8);
+    }
+
+    .modal-content {
+      margin: auto;
+      display: block;
+      max-width: 80%;
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .footer-nav {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .footer-nav a {
+      text-decoration: none;
+      color: #2a5d7c;
+      font-weight: 500;
+      margin: 0 12px;
+      border: 2px solid #c47f3f;
+      padding: 8px 14px;
+      background-color: #fff;
+      border-radius: 4px;
+    }
+
+    .footer-copy {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #2a5d7c;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Dropdown Ribbon -->
+  <div class="dropdown">
+    <button>Menu</button>
+    <div class="dropdown-content">
+      <a href="index.html">Home</a>
+      <a href="infographic.html">Infographic</a>
+      <a href="photgraphy.html">Photography</a>
+      <a href="bookmark.html">Bookmark</a>
+    </div>
+  </div>
+
+  <!-- Page Title -->
+  <div style="text-align: center;">
+    <h1>Bookmark Project</h1>
+  </div>
+
+  <!-- Bookmark Sketch -->
+  <div class="section">
+    <img src="images/bookmark-sketches.jpg" alt="Bookmark Sketches" class="bookmark-img" onclick="openModal('modal1')">
+    <div class="caption-box">
+      For the rough draft, I came up with five different design ideas for the bookmark. Only two of them made it past the concept stage. 
+      The first one says, "The more you read, the more you know, the more places you'll go." The other design says, "Shoot for the moon. If you miss, you'll touch the stars."
+    </div>
+    <button class="view-btn" onclick="openModal('modal1')">View</button>
+  </div>
+
+  <!-- Final Bookmark (Rotated 270°) -->
+  <div class="section">
+    <img src="images/Roeder_3.jpg" alt="Final Bookmark" class="bookmark-img" style="transform: rotate(270deg);" onclick="openModal('modal2')">
+    <div class="caption-box">
+      Ultimately, this is the design I chose to be printed. Numerous copies of this bookmark were printed and given to the local elementary school. 
+      I placed several stars on each side of the design because the school mascot was the Comets. I also placed the school logo at the bottom of the bookmark.
+    </div>
+    <button class="view-btn" onclick="openModal('modal2')">View</button>
+  </div>
+
+  <!-- Final Group Set (Rotated 180°) -->
+  <div class="section">
+    <img src="images/Group1_Final.jpg" alt="Group Bookmark Designs" class="bookmark-img" style="transform: rotate(180deg);" onclick="openModal('modal3')">
+    <div class="caption-box">
+      To print efficiently, a few of my classmates and I combined our bookmark designs onto one sheet, which was then printed and cut into individual bookmarks.
+    </div>
+    <button class="view-btn" onclick="openModal('modal3')">View</button>
+  </div>
+
+  <!-- Footer Navigation -->
+  <div class="footer-nav">
+    <a href="index.html">Home</a>
+    <a href="infographic.html">Infographic</a>
+    <a href="photgraphy.html">Photography</a>
+    <a href="bookmark.html">Bookmark</a>
+  </div>
+
+  <!-- Modals -->
+  <div id="modal1" class="modal">
+    <span class="close" onclick="closeModal('modal1')">&times;</span>
+    <img class="modal-content" src="images/bookmark-sketches.jpg">
+  </div>
+
+  <div id="modal2" class="modal">
+    <span class="close" onclick="closeModal('modal2')">&times;</span>
+    <img class="modal-content" src="images/Roeder_3.jpg">
+  </div>
+
+  <div id="modal3" class="modal">
+    <span class="close" onclick="closeModal('modal3')">&times;</span>
+    <img class="modal-content" src="images/Group1_Final.jpg">
+  </div>
+
+  <div class="footer-copy">
+    <p>&copy; 2025 Nate Roeder</p>
+  </div>
+
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = "block";
+    }
+    function closeModal(id) {
+      document.getElementById(id).style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
